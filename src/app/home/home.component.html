@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>Upcoming D&D Sessions</h1>
+  <ul class="event-list">
+    @for (event of events; track event.name) {
+      <li class="event-item">
+        <span class="event-name">{{ event.name }}</span>
+        <span class="event-date">{{ event.date | date: 'fullDate' }}</span>
+      </li>
+    }
+  </ul>
+</div>

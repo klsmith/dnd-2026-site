@@ -1,0 +1,77 @@
+.container {
+  padding: 60px;
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: sans-serif;
+  background-image: url('/parchment.png');
+  background-size: cover;
+  background-position: center;
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+  min-height: 80vh;
+  clip-path: polygon(
+    2% 2%, 5% 1%, 10% 2%, 15% 1%, 20% 2%, 25% 1%, 30% 2%, 35% 1%, 40% 2%, 45% 1%, 50% 2%, 55% 1%, 60% 2%, 65% 1%, 70% 2%, 75% 1%, 80% 2%, 85% 1%, 90% 2%, 95% 1%, 98% 2%,
+    99% 5%, 98% 10%, 99% 15%, 98% 20%, 99% 25%, 98% 30%, 99% 35%, 98% 40%, 99% 45%, 98% 50%, 99% 55%, 98% 60%, 99% 65%, 98% 70%, 99% 75%, 98% 80%, 99% 85%, 98% 90%, 99% 95%, 98% 98%,
+    95% 99%, 90% 98%, 85% 99%, 80% 98%, 75% 99%, 70% 98%, 65% 99%, 60% 98%, 55% 99%, 50% 98%, 45% 99%, 40% 98%, 35% 99%, 30% 98%, 25% 99%, 20% 98%, 15% 99%, 10% 98%, 5% 99%, 2% 98%,
+    1% 95%, 2% 90%, 1% 85%, 2% 80%, 1% 75%, 2% 70%, 1% 65%, 2% 60%, 1% 55%, 2% 50%, 1% 45%, 2% 40%, 1% 35%, 2% 30%, 1% 25%, 2% 20%, 1% 15%, 2% 10%, 1% 5%
+  );
+  position: relative;
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid #d4c4a8;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: -1;
+  clip-path: inherit;
+}
+
+h1 {
+  color: #7e2e2e; /* Muted Crimson */
+  font-family: 'Nodesto Caps Condensed', sans-serif;
+  font-size: 3em;
+  text-transform: uppercase;
+  border-bottom: 2px solid #c9ad6a; /* Muted Gold */
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+}
+
+.event-item {
+  padding: 15px 10px;
+  border-bottom: 1px solid #7e2e2e;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.event-item:last-child {
+  border-bottom: none;
+}
+
+.event-item:hover {
+  background-color: rgba(126, 46, 46, 0.05);
+}
+
+.event-name {
+  font-family: 'Zatanna Misdirection', serif;
+  font-weight: bold;
+  font-size: 1.5em;
+  color: #2c1810;
+}
+
+.event-date {
+  font-family: 'Bookinsanity', serif;
+  color: #4a3728;
+}
