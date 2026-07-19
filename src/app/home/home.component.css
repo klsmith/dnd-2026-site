@@ -1,6 +1,6 @@
 .container {
   padding: 60px;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 40px auto;
   font-family: sans-serif;
   background-image: url('/parchment.png');
@@ -17,6 +17,20 @@
   position: relative;
 }
 
+.columns {
+  display: flex;
+  gap: 40px;
+}
+
+.column {
+  flex: 1;
+}
+
+.column.left {
+  border-right: 2px solid #c9ad6a;
+  padding-right: 40px;
+}
+
 .container::before {
   content: "";
   position: absolute;
@@ -31,14 +45,71 @@
   clip-path: inherit;
 }
 
-h1 {
+h1, h2 {
   color: #7e2e2e; /* Muted Crimson */
   font-family: 'Nodesto Caps Condensed', sans-serif;
-  font-size: 3em;
   text-transform: uppercase;
   border-bottom: 2px solid #c9ad6a; /* Muted Gold */
   padding-bottom: 5px;
   margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-family: 'Zatanna Misdirection', serif;
+  font-size: 1.8em;
+  color: #2c1810;
+  margin: 10px 0;
+}
+
+.next-session-date {
+  font-family: 'Bookinsanity', serif;
+  font-size: 1.2em;
+  color: #4a3728;
+  margin: 5px 0;
+}
+
+.next-session-time {
+  font-family: 'Bookinsanity', serif;
+  font-size: 1.1em;
+  color: #7e2e2e;
+  font-weight: bold;
+}
+
+.session-notes {
+  margin-top: 20px;
+  font-family: 'Bookinsanity', serif;
+  font-style: italic;
+  color: #4a3728;
+}
+
+.session-notes ol li {
+  margin-bottom: 1em;
+}
+
+.bond-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  height: 1.5em;
+  background-color: #7e2e2e;
+  color: #f4e7d3;
+  border-radius: 50%;
+  font-weight: bold;
+  font-style: normal;
+  font-family: serif;
+  font-size: 1em;
+  vertical-align: middle;
+  line-height: 1em;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 .event-list {
@@ -74,4 +145,32 @@ h1 {
 .event-date {
   font-family: 'Bookinsanity', serif;
   color: #4a3728;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 30px 20px;
+    margin: 10px auto;
+    width: 95%;
+  }
+
+  .columns {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+
+  .column.left {
+    border-right: none;
+    padding-right: 0;
+    border-top: 2px solid #c9ad6a;
+    padding-top: 20px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.8em;
+  }
 }
